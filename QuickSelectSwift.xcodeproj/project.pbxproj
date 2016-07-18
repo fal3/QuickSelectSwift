@@ -22,6 +22,7 @@
 		A22E9A2A1D3ABFA3004D6734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22E9A2D1D3ABFA3004D6734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22E9A2F1D3ABFA3004D6734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2412A0B1D3D4A320065BF3A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				A22E9A2A1D3ABFA3004D6734 /* Assets.xcassets */,
 				A22E9A2C1D3ABFA3004D6734 /* LaunchScreen.storyboard */,
 				A22E9A2F1D3ABFA3004D6734 /* Info.plist */,
+				A2412A0B1D3D4A320065BF3A /* MyPlayground.playground */,
 			);
 			path = QuickSelectSwift;
 			sourceTree = "<group>";
@@ -288,6 +290,7 @@
 				A22E9A341D3ABFA3004D6734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
