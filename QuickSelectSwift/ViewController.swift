@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var bars: [UIImageView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +45,14 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    /* 
+     Input: Subarray A[left to right], kth smallest element.
+     Output: the Kth smallest element
+     k = Array.count / 2
+          Ex: Input(Array,k)
+     Output: Median of array
+     */
     func quickSelect<T: Comparable>(inout A: [T], _ left: Int, _ right: Int, _ k: Int) -> T {
         
         if left < right {
