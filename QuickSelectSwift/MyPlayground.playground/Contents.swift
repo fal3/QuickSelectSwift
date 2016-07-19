@@ -43,9 +43,24 @@ func quickSelect<T: Comparable>(inout a: [T], _ low: Int, _ high: Int, _ k: Int)
     }
 }
 
+func makeList(n:Int ) -> [Int] {
+    var result:[Int] = []
+    for i in 0..<n {
+        result.append(Int(arc4random_uniform(10) + 1))
+    }
+    return result
+}
+makeList(12)
+makeList(10)
+
+
 var qSel = [ 10, 0, 3, 9, 2, 14, 26, 27, 1, 5, 8, -1, 8 ]
 
 var KAY = qSel.count/2
+
+for i in 0...5 {
+    print(i)
+}
 
 //Input subarray[Left..Right], kth element, for the example we want the median, so we do qSel.count/2 th element
 quickSelect(&qSel, 0, qSel.count-1, KAY)

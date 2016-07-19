@@ -9,17 +9,76 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var bars: [UIImageView]!
     
+    @IBOutlet var one: UIImageView!
+    
+    @IBOutlet var two: UIImageView!
+    
+    @IBOutlet var three: UIImageView!
+    
+    @IBOutlet var four: UIImageView!
+    
+    @IBOutlet var five: UIImageView!
+    
+    @IBOutlet var six: UIImageView!
+    
+    @IBOutlet var seven: UIImageView!
+    
+    @IBOutlet var eight: UIImageView!
+    
+    
+    @IBOutlet var nine: UIImageView!
+    
+    var theList = [Int]()
+    
+    
+    var barImages : [UIImageView] = [UIImageView]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var theList = [4,1,10,8,7,12,9,2,15]
+        barImages = [one,two,three,four,five,six,seven,eight,nine]
+
         
-        let example = lomutoPartition(&theList, left: 0, right: theList.count-1)
+        
+        
+        
+        
         
     }
+    
+    @IBOutlet var partitionPos: UILabel!
+    
+    
+    @IBOutlet var median: UILabel!
+    
+    @IBAction func nextTapped(sender: UIButton) {
+        list = makeList(10)
+        let med = quickSelect(&list, 0, list.count-1, list.count/2)
+        median.text = "Median: \(med)"
+        
+        
+        changePics(list)
+        
+        
+    }
+    
+    var list = [Int]()
+    func changePics(list: [Int])  {
+            for i in 0...self.barImages.count-1 {
+                self.bars[i].image = UIImage(named: "\(list[i])")
+            }
+    }
+    
+    func makeList(n:Int ) -> [Int] {
+        var result:[Int] = []
+        for i in 0..<n {
+            result.append(Int(arc4random_uniform(10) + 1))
+        }
+        return result
+    }
+    
     
     func lomutoPartition<T: Comparable>(inout A: [T], left: Int, right: Int) -> Int {
         let pivot = A[right]
@@ -46,11 +105,11 @@ class ViewController: UIViewController {
     }
     
     
-    /* 
+    /*
      Input: Subarray A[left to right], kth smallest element.
      Output: the Kth smallest element
      k = Array.count / 2
-          Ex: Input(Array,k)
+     Ex: Input(Array,k)
      Output: Median of array
      */
     func quickSelect<T: Comparable>(inout A: [T], _ left: Int, _ right: Int, _ k: Int) -> T {
@@ -71,9 +130,9 @@ class ViewController: UIViewController {
     
     
     
-
- 
-
-
+    
+    
+    
+    
 }
 
