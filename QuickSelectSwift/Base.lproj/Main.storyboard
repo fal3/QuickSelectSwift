@@ -97,16 +97,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-jQ-5v2">
-                                <rect key="frame" x="20" y="317" width="243" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Ky1-RR-OMf"/>
-                                    <constraint firstAttribute="width" constant="243" id="pjz-gq-YjJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -116,7 +106,6 @@
                             <constraint firstItem="wvU-CW-AYt" firstAttribute="leading" secondItem="daE-yN-OlS" secondAttribute="trailing" constant="8" id="2Rc-nM-B8k"/>
                             <constraint firstItem="zW4-hO-RKQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="4xw-Ym-VLg"/>
                             <constraint firstItem="wvU-CW-AYt" firstAttribute="height" secondItem="zW4-hO-RKQ" secondAttribute="height" id="6O7-2i-ZAf"/>
-                            <constraint firstItem="OLJ-jQ-5v2" firstAttribute="top" secondItem="3vA-bj-Bl1" secondAttribute="bottom" constant="85" id="6SA-kG-I7p"/>
                             <constraint firstItem="XsQ-6o-gLn" firstAttribute="width" secondItem="zW4-hO-RKQ" secondAttribute="width" id="6fP-sz-slQ"/>
                             <constraint firstItem="daE-yN-OlS" firstAttribute="width" secondItem="zW4-hO-RKQ" secondAttribute="width" id="7h2-dU-fDM"/>
                             <constraint firstItem="fU4-QQ-D6q" firstAttribute="width" secondItem="zW4-hO-RKQ" secondAttribute="width" id="CRc-Yx-NER"/>
@@ -133,7 +122,6 @@
                             <constraint firstItem="wvU-CW-AYt" firstAttribute="width" secondItem="zW4-hO-RKQ" secondAttribute="width" id="PlJ-Qr-Upg"/>
                             <constraint firstItem="3vA-bj-Bl1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Txd-0M-MsA"/>
                             <constraint firstItem="XsQ-6o-gLn" firstAttribute="height" secondItem="zW4-hO-RKQ" secondAttribute="height" id="UXD-Vv-H6Z"/>
-                            <constraint firstItem="OLJ-jQ-5v2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WIK-8O-ABc"/>
                             <constraint firstItem="Ewn-ti-UuO" firstAttribute="width" secondItem="zW4-hO-RKQ" secondAttribute="width" id="X3B-Hg-mgP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QEs-Fz-E5T" secondAttribute="bottom" id="ZfR-3U-JwP"/>
                             <constraint firstItem="QEs-Fz-E5T" firstAttribute="height" secondItem="zW4-hO-RKQ" secondAttribute="height" id="a7K-zc-puZ"/>
@@ -156,17 +144,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="eight" destination="QEs-Fz-E5T" id="5LS-if-x6v"/>
-                        <outlet property="five" destination="XsQ-6o-gLn" id="ye2-rA-Bv2"/>
-                        <outlet property="four" destination="93X-wn-Jsb" id="4oR-Ve-Tva"/>
-                        <outlet property="listLabel" destination="OLJ-jQ-5v2" id="HDk-bk-R8b"/>
                         <outlet property="median" destination="3vA-bj-Bl1" id="a0V-WW-KGO"/>
-                        <outlet property="nine" destination="fU4-QQ-D6q" id="aOb-nz-meB"/>
-                        <outlet property="one" destination="zW4-hO-RKQ" id="t0N-O3-rDW"/>
-                        <outlet property="seven" destination="oot-qs-ItK" id="idl-jb-HOl"/>
-                        <outlet property="six" destination="Ewn-ti-UuO" id="p8S-U7-4wh"/>
-                        <outlet property="three" destination="wvU-CW-AYt" id="0SC-UJ-Txi"/>
-                        <outlet property="two" destination="daE-yN-OlS" id="mqe-9F-PcM"/>
                         <outletCollection property="bars" destination="fU4-QQ-D6q" collectionClass="NSMutableArray" id="d28-HG-w97"/>
                         <outletCollection property="bars" destination="QEs-Fz-E5T" collectionClass="NSMutableArray" id="zvR-bv-Qcf"/>
                         <outletCollection property="bars" destination="oot-qs-ItK" collectionClass="NSMutableArray" id="7vP-un-BHr"/>

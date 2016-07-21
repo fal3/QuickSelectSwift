@@ -12,65 +12,28 @@ class ViewController: UIViewController {
     
     @IBOutlet var bars: [UIImageView]!
     
-    @IBOutlet var one: UIImageView!
-    
-    @IBOutlet var two: UIImageView!
-    
-    @IBOutlet var three: UIImageView!
-    
-    @IBOutlet var four: UIImageView!
-    
-    @IBOutlet var five: UIImageView!
-    
-    @IBOutlet var six: UIImageView!
-    
-    @IBOutlet var seven: UIImageView!
-    
-    @IBOutlet var eight: UIImageView!
-    
-    
-    @IBOutlet var nine: UIImageView!
-    
-    var theList = [Int]()
-    
+    var list = [Int]()
     
     var barImages : [UIImageView] = [UIImageView]()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        barImages = [one,two,three,four,five,six,seven,eight,nine]
-
-        
-        
-        
-        
-        
-        
-    }
-    
-    @IBOutlet var partitionPos: UILabel!
-    
     
     @IBOutlet var median: UILabel!
     
     @IBAction func nextTapped(sender: UIButton) {
-        
+        //UIElements
         list = makeList(10)
         let med = quickSelect(&list, 0, list.count-1, list.count/2)
         median.text = "Median: \(med)"
-        
         
         changePics(list)
         
         
     }
     
-    var list = [Int]()
     func changePics(list: [Int])  {
-            for i in 0...self.barImages.count-1 {
-                self.bars[i].image = UIImage(named: "\(list[i])")
-            }
-    
+        for i in 0...self.bars.count-1 {
+            self.bars[i].image = UIImage(named: "\(list[i])")
+        }
+        
     }
     
     func makeList(n:Int ) -> [Int] {
@@ -98,10 +61,11 @@ class ViewController: UIViewController {
                 s += 1
             }
         }
-      
+        
         (A[s], A[right]) = (A[right], A[s])
         return s
     }
+    
     /*
      Swift's swap() doesn't like it if the items you're trying to swap refer to
      the same memory location. This little wrapper simply ignores such swaps.
@@ -112,6 +76,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    //MARK: QuickSelect
     
     /*
      Input: Subarray A[left to right], kth smallest element.
