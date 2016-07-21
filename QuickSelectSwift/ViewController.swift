@@ -54,6 +54,7 @@ class ViewController: UIViewController {
     @IBOutlet var median: UILabel!
     
     @IBAction func nextTapped(sender: UIButton) {
+        
         list = makeList(10)
         let med = quickSelect(&list, 0, list.count-1, list.count/2)
         median.text = "Median: \(med)"
@@ -69,6 +70,7 @@ class ViewController: UIViewController {
             for i in 0...self.barImages.count-1 {
                 self.bars[i].image = UIImage(named: "\(list[i])")
             }
+    
     }
     
     func makeList(n:Int ) -> [Int] {
@@ -80,6 +82,12 @@ class ViewController: UIViewController {
     }
     
     
+    @IBOutlet var pivotPosLabel: UILabel!
+    
+    
+    @IBOutlet var listLabel: UILabel!
+    
+    var pivs = [String]()
     func lomutoPartition<T: Comparable>(inout A: [T], left: Int, right: Int) -> Int {
         let pivot = A[right]
         
@@ -90,7 +98,7 @@ class ViewController: UIViewController {
                 s += 1
             }
         }
-        
+      
         (A[s], A[right]) = (A[right], A[s])
         return s
     }
